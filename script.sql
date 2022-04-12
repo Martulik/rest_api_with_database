@@ -8,21 +8,21 @@ CREATE TABLE `marks` (
 
 CREATE TABLE `people` (
   `id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `first_name` varchar(16) NOT NULL,
-  `last_name` varchar(16) NOT NULL,
-  `pather_name` varchar(16) NOT NULL,
+  `first_name` varchar(20) NOT NULL,
+  `last_name` varchar(20) NOT NULL,
+  `pather_name` varchar(20) NOT NULL,
   `group_id` int,
   `type` varchar(1)
 );
 
 CREATE TABLE `groups` (
   `id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `name` varchar(64) NOT NULL
+  `name` varchar(50) NOT NULL
 );
 
 CREATE TABLE `subjects` (
   `id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `name` varchar(64) NOT NULL
+  `name` varchar(50) NOT NULL
 );
 
 ALTER TABLE `marks` ADD FOREIGN KEY (`subject_id`) REFERENCES `subjects` (`id`);

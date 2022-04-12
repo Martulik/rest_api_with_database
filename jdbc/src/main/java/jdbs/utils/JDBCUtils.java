@@ -8,9 +8,6 @@ public class JDBCUtils {
         String name = "martha";
         String password = "password";
         Connection connection = DriverManager.getConnection(dbURL, name, password);
-        if (connection.isValid(1)) {
-            System.out.println("connection success");
-        }
         return connection;
     }
 
@@ -55,7 +52,7 @@ public class JDBCUtils {
     public static int addGroup(Connection connection, String name) throws SQLException {
         int id = getGroupId(connection, name);
         if (id == -1) {
-            String insQuery = "insert into `groups`(name) values (?)";
+            String insQuery = "insert into `member`(name) values (?)";
             try (PreparedStatement statement = connection.prepareStatement(insQuery)) {
                 statement.setString(1, name);
                 statement.executeUpdate();
@@ -66,7 +63,7 @@ public class JDBCUtils {
     }
 
     private static int getGroupId(Connection connection, String name) throws SQLException {
-        String sql = "select * from `groups` where name = ?";
+        String sql = "select * from `member` where name = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, name);
             try (ResultSet rs = statement.executeQuery()) {

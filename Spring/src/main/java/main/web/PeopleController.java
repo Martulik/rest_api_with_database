@@ -4,7 +4,6 @@ import main.entity.People;
 import main.exception.GroupNotFoundException;
 import main.exception.MarkNotFoundException;
 import main.exception.PeopleNotFoundException;
-import main.exception.SubjectNotFoundException;
 import main.service.PeopleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -98,6 +97,5 @@ public class PeopleController {
     public void setPeopleService(PeopleService peopleService) {
         this.peopleService = peopleService;
     }
-
 
 }

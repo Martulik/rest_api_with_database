@@ -1,8 +1,5 @@
 package main.entity;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import java.util.List;
 

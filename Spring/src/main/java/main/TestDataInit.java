@@ -23,9 +23,7 @@ public class TestDataInit implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 //        grpRep.save(new Groups("Programmers"));
-
 //        usrRep.save(new User("user",pwdEncoded.encode("pwd"), Collections.singletonList("ROLE_USER")));
-
-
     }
+
 }

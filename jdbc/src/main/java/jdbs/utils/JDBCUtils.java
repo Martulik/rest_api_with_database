@@ -5,8 +5,8 @@ import java.sql.*;
 public class JDBCUtils {
     public static Connection getNewConnection() throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/db_office";
-        String name = "martha";
-        String password = "password";
+        String name = "xxx";
+        String password = "xxx";
         Connection connection = DriverManager.getConnection(dbURL, name, password);
         return connection;
     }

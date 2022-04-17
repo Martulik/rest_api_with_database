@@ -20,12 +20,6 @@ public interface PeopleService {
     //какой учитель поставил оценку
     People getTeacherByMarkId(Integer id);
 
-//    // найти учителей по имени предмета, который они ведут
-//    List<People> getTeachersBySubjectName(String subName);
-//
-//    // найти студентов по имени предмета, который они посещают
-//    List<People> getStudentsBySubjectName(String subName);
-
     // количество студентов в группе по ее имени
     Integer getCountStudents(String grpName);
 

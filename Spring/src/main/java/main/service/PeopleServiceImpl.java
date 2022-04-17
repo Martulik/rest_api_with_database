@@ -1,6 +1,5 @@
 package main.service;
 
-import main.entity.Groups;
 import main.entity.People;
 import main.exception.GroupNotFoundException;
 import main.exception.MarkNotFoundException;

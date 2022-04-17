@@ -22,14 +22,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     public AuthenticationManager authenticationManager() throws Exception {
         return super.authenticationManagerBean();
     }
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.inMemoryAuthentication()
-//                .withUser("user").password("{noop}pwd").roles("USER")
-//                .and()
-//                .withUser("admin").password("{noop}apwd").roles("ADMIN");
-//                //пароли тут нельзя  нужно шифрование
-//    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
